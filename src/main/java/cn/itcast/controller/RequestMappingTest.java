@@ -62,12 +62,12 @@ public class RequestMappingTest {
     }
 
     //路径上可以有占位符：  占位符 语法就是可以在任意路径的地方写一个{变量名}
-    //   /user/admin    /user/leifengyang
+
     // 路径上的占位符只能占一层路径
-    @RequestMapping("/user/{id}")
-    public String pathVariableTest(@PathVariable("id")String id){
-        System.out.println("路径上的占位符的值"+id);
-        return "success";
-    }
+   @RequestMapping("/qwe/{qw}")
+    public   String  asd(@PathVariable("qw") String id){
+       System.out.println(""+id);
+       return  "success";
+   }
 
 }

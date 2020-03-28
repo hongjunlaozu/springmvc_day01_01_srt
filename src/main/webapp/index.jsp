@@ -11,16 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-
-    <h3>入门程序</h3>
-
-
-    <a href="hello">RequestMapping注解</a>
-
-    <a href="/haha/handle02">RequestMapping注解</a>
-
-    <a href="/haha/handle03?name=3">RequestMapping注解</a>
-    <a href="/11111">RequestMapping注解</a>
-
+<a href=""
 </body>
 </html>
