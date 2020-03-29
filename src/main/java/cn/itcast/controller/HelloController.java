@@ -63,65 +63,65 @@ public class HelloController {
 		System.out.println("cookie中的jid的值"+jid);
 		return "success";
 	}
-//
-//	/**
-//	 * 如果我们的请求参数是一个POJO；
-//	 * SpringMVC会自动的为这个POJO进行赋值？
-//	 * 1）、将POJO中的每一个属性，从request参数中尝试获取出来，并封装即可；
-//	 * 2）、还可以级联封装；属性的属性
-//	 * 3）、请求参数的参数名和对象中的属性名一一对应就行
-//	 *
-//	 *
-//	 * 提交的数据可能有乱码：
-//	 * 请求乱码：
-//	 * 		GET请求：改server.xml；在8080端口处URIEncoding="UTF-8"
-//	 * 		POST请求：
-//	 * 			在第一次获取请求参数之前设置
-//	 * 			request.setCharacterEncoding("UTF-8");
-//	 * 			自己写一个filter；SpringMVC有这个filter
-//	 *
-//	 * 响应乱码：
-//	 * 		response.setContentType("text/html;charset=utf-8")
-//	 * @param book
-//	 * @return
-//	 */
-//	@RequestMapping("/book")
-//	public String addBook(Book book){
-//		System.out.println("我要保存的图书："+book);
-//		return "success";
-//	}
-//
-//	/**
-//	 * SpringMVC可以直接在参数上写原生API;
-//	 *
-//	 * HttpServletRequest
-//	 * HttpServletResponse
-//	 * HttpSession
-//	 *
-//	 *
-//	 * java.security.Principal
-//	 * Locale：国际化有关的区域信息对象
-//	 * InputStream：
-//	 * 		ServletInputStream inputStream = request.getInputStream();
-//	 * OutputStream：
-//	 * 		ServletOutputStream outputStream = response.getOutputStream();
-//	 * Reader：
-//	 * 		BufferedReader reader = request.getReader();
-//	 * Writer：
-//	 * 		PrintWriter writer = response.getWriter();
-//	 *
-//	 * @throws IOException
-//
-//	 *
-//	 *
-//	 */
-//	@RequestMapping("/handle03")
-//	public String handle03(HttpSession session,
-//			HttpServletRequest request,HttpServletResponse response) throws IOException {
-//		request.setAttribute("reqParam", "我是请求域中的");
-//		session.setAttribute("sessionParam", "额我是Session域中的");
-//
-//		return "success";
-//	}
+
+	/**
+	 * 如果我们的请求参数是一个POJO；
+	 * SpringMVC会自动的为这个POJO进行赋值？
+	 * 1）、将POJO中的每一个属性，从request参数中尝试获取出来，并封装即可；
+	 * 2）、还可以级联封装；属性的属性
+	 * 3）、请求参数的参数名和对象中的属性名一一对应就行
+	 *
+	 *
+	 * 提交的数据可能有乱码：
+	 * 请求乱码：
+	 * 		GET请求：改server.xml；在8080端口处URIEncoding="UTF-8"
+	 * 		POST请求：
+	 * 			在第一次获取请求参数之前设置
+	 * 			request.setCharacterEncoding("UTF-8");
+	 * 			自己写一个filter；SpringMVC有这个filter
+	 *
+	 * 响应乱码：
+	 * 		response.setContentType("text/html;charset=utf-8")
+	 * @param book
+	 * @return
+	 */
+	@RequestMapping("/book")
+	public String addBook(Book book){
+		System.out.println("我要保存的图书："+book);
+		return "success";
+	}
+
+	/**
+	 * SpringMVC可以直接在参数上写原生API;
+	 *
+	 * HttpServletRequest
+	 * HttpServletResponse
+	 * HttpSession
+	 *
+	 *
+	 * java.security.Principal
+	 * Locale：国际化有关的区域信息对象
+	 * InputStream：
+	 * 		ServletInputStream inputStream = request.getInputStream();
+	 * OutputStream：
+	 * 		ServletOutputStream outputStream = response.getOutputStream();
+	 * Reader：
+	 * 		BufferedReader reader = request.getReader();
+	 * Writer：
+	 * 		PrintWriter writer = response.getWriter();
+	 *
+	 * @throws IOException
+
+	 *
+	 *
+	 */
+	@RequestMapping("/handle03")
+	public String handle03(HttpSession session,
+			HttpServletRequest request,HttpServletResponse response) throws IOException {
+		request.setAttribute("reqParam", "我是请求域中的");
+		session.setAttribute("sessionParam", "额我是Session域中的");
+
+		return "success";
+	}
 
 }
